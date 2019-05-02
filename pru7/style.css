@@ -1,0 +1,64 @@
+body {
+margin:0px;
+padding:0px;
+}
+#fondo {
+background: url("https://img.freepik.com/foto-gratis/diversa-comida-mexicana-fondo-oscuro_23-2147740705.jpg?size=626&ext=jpg");
+
+background-size: cover;
+text-align:center;
+margin-top:-20px;
+padding-top:10px;
+height:800px;
+display: block;
+}
+h2{
+color:#fff;
+}
+h3{
+color:#ccc;
+}
+.contenedor{
+  margin-top: 10%;
+padding:1px;
+display:inline-block;
+background-color: #ffffff;
+width:500px;
+height:500px;
+border:1px black solid;
+border: 1px solid rgb(204, 204, 204);
+border-radius: 3px 3px 3px 3px;
+-webkit-box-shadow: 10px 10px 10px 0px rgba(100, 100, 100, 0.75);
+-moz-box-shadow: 6px 5px 8px 0px rgba(50, 50, 50, 0.75);
+box-shadow: 6px 5px 8px 0px rgba(50, 50, 50, 0.75);;
+}
+
+.figura{
+border:2px #fff solid;
+background: red;
+margin:0px;
+padding:0px;
+display:inline-block;
+box-shadow: 2px 2px 2px rgb(136, 136, 136);
+margin:2px;
+}
+.figura:hover{
+cursor:pointer;
+background:url("http://ejerciciosencasa.es/wp-content/uploads/2014/09/comida_chatarra_mas_danina.jpg.jpg") !important;
+background-size: cover !important;
+}
+.activa{
+background: url("https://www.elpopular.pe/sites/default/files/styles/img_620x465/public/imagen/2015/09/07/Noticia-136051-las-vitaminas.jpg?itok=YlCbdFmq");
+background-size: cover;
+}
+.error{
+background:red;
+}
+.circulo{
+/* border-radius:50px; */
+width: 100px;
+height: 100px;
+-moz-border-radius: 50px;
+-webkit-border-radius: 50px;
+border-radius: 50px;
+}
