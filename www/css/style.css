@@ -6,7 +6,43 @@
   height: auto;
 }
 a{
-  text-decoration-color: none;
+  text-decoration: none !important;
+  color: #FFF !important;
+}
+.fila11{
+  background:#000000;
+  background-position:fixed;
+}
+.fila111{
+  background: #000000;
+  padding: 2%;
+}
+.efecto{
+  font-size:17px;
+  margin-top:2%;
+  text-align:center;
+  color:#FFF;
+  padding:4%;
+}
+.efecto2{
+  font-size:20px;
+  margin-top:2%;
+  text-align:center;
+  color:#000000;
+  background: #f79c1d;
+  padding:4%;
+  height:auto;
+  margin: 0;
+}
+.a2{
+  padding: 2%;
+  text-decoration: none !important;
+  color: #000000 !important;
+  background: #76a21e;
+  font-size: 40px !important;
+  width: 100%;
+  height: 60px;
+  text-align: center;
 }
 .efecto:hover{
     background: #2D760A;
