@@ -327,8 +327,8 @@ span.pink {
   box-sizing: border-box;
 }
 
-body {
-  background: #FF9090;
+.contej{
+  background:orange;
 }
 
 .todo {
@@ -337,18 +337,20 @@ body {
   margin: 0 auto;
   margin-top: 10px;
   position: relative;
-} 
+}
 
 .titulo {
-   font-size: 80px;
+  text-align: center;
+   font-size: 35px;
    font-family: Lucida Console, Courier, monospace;
-   color: rgb(217, 103, 29);
-  
+   color: #000000;
+   -webkit-text-stroke:2px red;
+
 }
 
 img {
-  max-width: 80%;
-  height: auto;
+  max-width: 90%;
+  height: 50px;
   margin-top: 20px;
 }
 .memoria{
@@ -357,7 +359,8 @@ img {
 
   border-radius: 10px;
   position: relative;
-  background: #FFFA62;
+  background:#AD5C06;
+
 }
 
 .memoria:after  {
@@ -365,16 +368,16 @@ img {
   display: block;
   clear: both;
 }
- 
+
 .carta {
   width: 14%;
   margin: 1% 1%;
-  height: 150px;
+  height: 80px;
   border-radius: 8px;
   float: left;
   cursor: pointer;
-  
-  
+
+
 }
 
 .inner-wrap {
@@ -388,7 +391,7 @@ img {
 
 
 .frente {
-  background: #FFCF7F top center;
+  background: #D0C40C top center;
   width: 100%;
   height: 100%;
   border-radius: 8px;
@@ -423,7 +426,7 @@ img {
   -o-transform: rotateY(180deg);
   text-align: center;
   box-shadow: 0 6px 16px rgba(0,0,0,0.30);
-  
+
 }
 
 .contador p {
@@ -451,4 +454,8 @@ p.counter {
 .frente:hover {
   background: #E8A868;
   cursor: pointer;
+}
+.tablea{
+  width:100%;
+  height:500px;
 }

@@ -3,36 +3,36 @@ angular.module('starter.controllers', [])
 .controller('DashCtrl', function($scope) {})
 .controller("controljuego",function($scope){
   $(document).ready(function(){
-  
+
 var checkArray = []; // para verificar si las dos cartas con click son el mismo personaje
-var idArray = []; //array para guardar los ids de las cartas que tienen click 
+var idArray = []; //array para guardar los ids de las cartas que tienen click
 var contador = 0;
-var fin = 0; 
+var fin = 0;
 var fields = document.querySelectorAll(".atras");
 
 
 var images = [
-"https://s-media-cache-ak0.pinimg.com/originals/30/9b/58/309b58c5153182dc480d429d21bb1ec1.png",
-"https://s-media-cache-ak0.pinimg.com/originals/4b/ae/6c/4bae6cba8ec4060b5c4059ad2ce9c329.png",
-"https://s-media-cache-ak0.pinimg.com/originals/b6/df/d7/b6dfd79c625f9ebe14709a9b75224962.png",
-"https://s-media-cache-ak0.pinimg.com/originals/76/e7/a3/76e7a392abff7c8a22969f7c95f37d4c.png",
-"https://s-media-cache-ak0.pinimg.com/originals/cb/ca/50/cbca50fc5156fb15b68bd3ab5dae6e06.png",
-"https://s-media-cache-ak0.pinimg.com/originals/de/b9/70/deb9709e87f1d5b7f6457e8286113012.png",
-"https://s-media-cache-ak0.pinimg.com/originals/29/9e/c7/299ec7c3cd62b88dd4905ffc6a71d8f9.png",
-"https://s-media-cache-ak0.pinimg.com/originals/74/11/00/74110094c67aa9a519c70ecb7cec7d76.png",
-"http://diysolarpanelsv.com/images/neville-clipart-4.png",
-"https://s-media-cache-ak0.pinimg.com/originals/30/9b/58/309b58c5153182dc480d429d21bb1ec1.png",
-"https://s-media-cache-ak0.pinimg.com/originals/4b/ae/6c/4bae6cba8ec4060b5c4059ad2ce9c329.png",
-"https://s-media-cache-ak0.pinimg.com/originals/b6/df/d7/b6dfd79c625f9ebe14709a9b75224962.png",
-"https://s-media-cache-ak0.pinimg.com/originals/76/e7/a3/76e7a392abff7c8a22969f7c95f37d4c.png",
-"https://s-media-cache-ak0.pinimg.com/originals/cb/ca/50/cbca50fc5156fb15b68bd3ab5dae6e06.png",
-"https://s-media-cache-ak0.pinimg.com/originals/de/b9/70/deb9709e87f1d5b7f6457e8286113012.png",
-"https://s-media-cache-ak0.pinimg.com/originals/29/9e/c7/299ec7c3cd62b88dd4905ffc6a71d8f9.png",
-"https://s-media-cache-ak0.pinimg.com/originals/74/11/00/74110094c67aa9a519c70ecb7cec7d76.png",
-"http://diysolarpanelsv.com/images/neville-clipart-4.png"
+"https://hips.hearstapps.com/es.h-cdn.co/quoes/images/naturaleza/el-tomate-es-una-fruta-una-hortaliza-una-verdura/924689-1-esl-ES/el-tomate-es-una-fruta-una-hortaliza-una-verdura.jpg?resize=480:*",
+"https://www.gob.mx/cms/uploads/article/main_image/64946/zanahoria-secundaria.jpg",
+"http://www.frutaseladio.com/res/uploads/20160504172132-eladio-broccoli-kg.jpg",
+"https://vivatumusica.com/wp-content/uploads/2016/07/naranja-1.jpg",
+"https://cdn.shopify.com/s/files/1/2216/7909/products/bananas_mano_2b85952b-96ca-48b8-8056-3d4ba2dc799e_1024x1024.jpg?v=1541215910",
+"https://previews.123rf.com/images/atoss/atoss1305/atoss130500095/19695010-pi%C3%B1a-con-las-rebanadas-aisladas-en-blanco.jpg",
+"https://comefruta.es/wp-content/uploads/sandia_rallada_sin_semillas2.jpg",
+"http://www.delaquintaasucasa.com.ar/wordpress/wp-content/uploads/2015/08/pimientoMix.jpg",
+"https://exoticfruitbox.com/wp-content/uploads/2015/10/aguacate.jpg",
+"http://www.delaquintaasucasa.com.ar/wordpress/wp-content/uploads/2015/08/pimientoMix.jpg",
+"https://exoticfruitbox.com/wp-content/uploads/2015/10/aguacate.jpg",
+"https://comefruta.es/wp-content/uploads/sandia_rallada_sin_semillas2.jpg",
+"https://previews.123rf.com/images/atoss/atoss1305/atoss130500095/19695010-pi%C3%B1a-con-las-rebanadas-aisladas-en-blanco.jpg",
+"https://cdn.shopify.com/s/files/1/2216/7909/products/bananas_mano_2b85952b-96ca-48b8-8056-3d4ba2dc799e_1024x1024.jpg?v=1541215910",
+"https://vivatumusica.com/wp-content/uploads/2016/07/naranja-1.jpg",
+"http://www.frutaseladio.com/res/uploads/20160504172132-eladio-broccoli-kg.jpg",
+"https://www.gob.mx/cms/uploads/article/main_image/64946/zanahoria-secundaria.jpg",
+"https://hips.hearstapps.com/es.h-cdn.co/quoes/images/naturaleza/el-tomate-es-una-fruta-una-hortaliza-una-verdura/924689-1-esl-ES/el-tomate-es-una-fruta-una-hortaliza-una-verdura.jpg?resize=480:*"
 ];
 // verificacion de los clicks
-function clicked() { 
+function clicked() {
   if ($(this).find(".inner-wrap").hasClass("flipped")) {
     return;
   }
@@ -43,14 +43,14 @@ function clicked() {
 }
 
 $(".carta").on("click", clicked);
-  
+
 //reiniciar el juego
 function reiniciar() {
   $(".atras").find("img").remove(); //quitar todas las imagenes actuales
   $(".carta .inner-wrap").removeClass("flipped"); // quitar la classe flipped para volver a su estado inicial
-  checkArray = []; 
+  checkArray = [];
   idArray = [];
-  contador = 0; 
+  contador = 0;
   fin = 0;
   iniciarJuego();
 }
@@ -61,8 +61,8 @@ function verificarFin() {
     reiniciar();
   }
 }
-//para random de las imagenes 
-function shuffleArray(array) { 
+//para random de las imagenes
+function shuffleArray(array) {
     for (var i = array.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
         var temp = array[i];
@@ -74,7 +74,7 @@ function shuffleArray(array) {
 
 function iniciarJuego() {
 
-  
+
 
   var arr = shuffleArray(images); //array con las imagenes de forma aleatoria
  // append de las imagenes a la clase para la parte de atras de las cartas
@@ -88,34 +88,34 @@ function iniciarJuego() {
 }
 
 function check() {
-  //si los fields se  han hecho dos clicks 
+  //si los fields se  han hecho dos clicks
   if (checkArray.length === 2) {
-    $(".carta").off("click", clicked); 
+    $(".carta").off("click", clicked);
     setTimeout(function(){
       //si no hay match
-      if (checkArray[0] !== checkArray[1]) { 
+      if (checkArray[0] !== checkArray[1]) {
         //voltear las dos cartas seleccionadas
-        $("#" + idArray[0]).find(".inner-wrap").removeClass("flipped"); 
-        $("#" + idArray[1]).find(".inner-wrap").removeClass("flipped"); 
+        $("#" + idArray[0]).find(".inner-wrap").removeClass("flipped");
+        $("#" + idArray[1]).find(".inner-wrap").removeClass("flipped");
         contador++;
         //vaciar los arrays para la siguiente eleccion
-        checkArray = []; 
-        idArray = []; 
+        checkArray = [];
+        idArray = [];
         //habilitar el click de nuevo
         $(".carta").on("click", clicked);
       } else {
 
         contador++;
-        
+
         fin += 2; // contador para el final del juego, se agregan dos para el contador de fin
         //vaciar los dos arrays
-        checkArray = []; 
-        idArray = []; 
-        verificarFin(); 
-        $(".carta").on("click", clicked); 
+        checkArray = [];
+        idArray = [];
+        verificarFin();
+        $(".carta").on("click", clicked);
       }
       document.querySelector(".counter").innerHTML = contador;
-    }, 800);  
+    }, 800);
   }
 }
 
