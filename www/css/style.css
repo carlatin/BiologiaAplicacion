@@ -459,3 +459,38 @@ p.counter {
   width:100%;
   height:500px;
 }
+.leyes{
+  text-align: center;
+  background: #992e24;
+}
+.tex1{
+  text-align: center;
+  font-size: 10px;
+  background: #a0855b;
+  color: #ffff;
+}
+.tit1{
+  color: #FFF;
+  background: #38470b;
+}
+.img1{
+  margin-top:10px;
+  width: 100% !important;
+  height: 250px !important;
+}
+.arbol{
+  background: url("https://static7.depositphotos.com/1150740/781/v/950/depositphotos_7816485-stock-illustration-cartoon-big-green-tree-isolated.jpg")no-repeat;
+  background-size: 420px 2500px;
+}
+.yo{
+  text-align: center;
+  background: #992e24;
+  border-radius: 60px;
+  color: #FFF;
+}
+.yon{
+  text-align: center;
+  font-size: 25px;
+  border-radius: 60px;
+  background: #a1dd70;
+}
